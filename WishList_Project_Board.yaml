@@ -1,0 +1,53 @@
+name: WishList Development Roadmap (4 Weeks)
+description: Kanban board for tracking WishList app development tasks in 4 weeks.
+columns:
+  - name: To Do
+  - name: In Progress
+  - name: Done
+
+tasks:
+  Week 1 – Setup & Authentication:
+    - Initialize monorepo (wishlist-app/) with wishlist-client and wishlist-backend
+    - Configure TypeScript, ESLint, Prettier in both
+    - Setup wishlist-backend (Express + Drizzle + PostgreSQL)
+    - Setup wishlist-client (React + Vite + TS + TailwindCSS)
+    - Define DB schema (Users, Wishlists, Items, Payments)
+    - Backend: User registration & login with JWT
+    - Backend: Role-based access (user/admin)
+    - Frontend: Auth pages (Register, Login, Logout)
+    - Frontend: Basic dashboard layout
+    - Docs: Initial ARCHITECTURE.md, DB_SCHEMA.md, API.md
+
+  Week 2 – Wishlist & Items:
+    - Backend: CRUD for wishlists
+    - Backend: CRUD for items (name, price, quantity, image, status)
+    - Frontend: Create wishlist form
+    - Frontend: Add item form/modal
+    - Frontend: Display wishlist with items
+    - Docs: Update UI_FLOWS.md with wishlist & item screens
+    - Docs: Update API_USAGE.md with wishlist endpoints
+
+  Week 3 – Payments & Sharing:
+    - Backend: /item/pay endpoint with full payment rule
+    - Backend: Enforce full payments only (reject partials, accept multiples)
+    - Backend: Update item quantity & mark complete at 0
+    - Backend: Integrate Stripe (sandbox)
+    - Backend: Integrate MPesa (sandbox)
+    - Backend: Shareable wishlist links
+    - Frontend: Payment modal (select 1 or more full units)
+    - Frontend: Handle payment success/failure
+    - Frontend: Contributor view (public wishlist + pay flow)
+    - Docs: Add PAYMENT.md (flow diagrams, sample requests)
+
+  Week 4 – Admin, Testing & Deployment:
+    - Backend: Admin endpoints (manage users, view payments)
+    - Backend: Basic analytics (most purchased items, total contributions)
+    - Backend: Jest unit & integration tests
+    - Backend: K6 performance tests
+    - Frontend: Admin dashboard (users + payments + charts)
+    - Frontend: Cypress E2E tests (auth, wishlist, payments)
+    - Deployment: Deploy backend (Render/AWS/Azure)
+    - Deployment: Deploy frontend (Vercel/Netlify)
+    - Docs: Finalize DEPLOYMENT.md, TESTING.md
+    - Docs: Update root README.md
+    - Docs: Add live demo link
